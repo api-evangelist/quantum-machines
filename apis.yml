@@ -1,0 +1,302 @@
+aid: quantum-machines
+name: Quantum Machines
+description: >-
+  Quantum Machines is a Tel Aviv, Israel-based quantum control company that
+  builds the Quantum Orchestration Platform (QOP) — a unified hardware and
+  software stack for controlling quantum processors at the pulse level. Its
+  hardware portfolio centers on the OPX+ and OPX1000 controllers, which are
+  built around a custom Pulse Processing Unit (PPU) architecture that executes
+  classical control and real-time feedback alongside arbitrary waveform
+  generation, with sub-microsecond classical-quantum round trips and 160 ns
+  active reset latency. The platform is programmed in QUA, the company's
+  domain-specific pulse-level language, exposed to developers through the
+  qm-qua Python SDK and an extensive open-source ecosystem under the
+  qua-platform GitHub organization (QUAlibrate, QUAM, qua-libs, py-qua-tools,
+  qua-dashboards). Quantum Machines also ships peripheral hardware including
+  the Octave up/down converter (to 18 GHz), QDAC-II ultra-low-noise DACs,
+  QSwitch, QBox, and the QCage/QBoard/QFilter cryogenic line. The platform is
+  qubit-modality agnostic, supporting superconducting, semiconductor spin,
+  trapped-ion, neutral-atom, and color-center systems, and is used by
+  university labs (MIT, Caltech, Harvard, Princeton, Weizmann) and quantum
+  startups (Alice & Bob, Diraq, EeroQ). Quantum Machines has partnered with
+  NVIDIA on the DGX Quantum hybrid quantum-classical compute platform and
+  acquired the Delft-based QHarbor Bioscience team as a European R&D hub.
+  Quantum Machines does not currently publish a public REST API, OpenAPI
+  specification, or self-service developer signup; the QOP control surface is
+  reached exclusively via the qm-qua Python SDK against an OPX/OPX1000
+  controller (hardware or qm-saas cloud simulator).
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Quantum Computing
+  - Quantum Control
+  - Pulse Level Programming
+  - QUA
+  - OPX
+  - OPX1000
+  - QOP
+  - Quantum Orchestration Platform
+  - Pulse Processing Unit
+  - Real Time Feedback
+  - Arbitrary Waveform Generation
+  - Superconducting Qubits
+  - Trapped Ions
+  - Neutral Atoms
+  - Color Centers
+  - Cryogenic Electronics
+  - Hardware
+  - Israel
+url: https://raw.githubusercontent.com/api-evangelist/quantum-machines/refs/heads/main/apis.yml
+created: '2026-05-24'
+modified: '2026-05-24'
+specificationVersion: '0.20'
+apis:
+  - aid: quantum-machines:qm-qua-python-sdk
+    name: qm-qua Python SDK
+    description: >-
+      Official Python SDK for the QUA pulse-level programming language. Provides
+      the QuantumMachinesManager client, qua DSL (program, declare, play,
+      measure, wait, save, stream_processing, math, casting, random),
+      Configuration API, Results, Simulator, and Octave APIs to compile and
+      execute QUA programs against an OPX+, OPX1000, or the qm-saas cloud
+      simulator. Communicates with the controller over gRPC; not a public REST
+      API.
+    tags:
+      - Quantum Computing
+      - SDK
+      - Python
+      - QUA
+      - QOP
+    humanURL: https://docs.quantum-machines.co/latest/docs/API_references/qua/dsl_main/
+    properties:
+      - url: https://docs.quantum-machines.co/latest/docs/API_references/qua/dsl_main/
+        type: Documentation
+      - url: https://pypi.org/project/qm-qua/
+        type: PyPI
+      - url: https://docs.quantum-machines.co/latest/docs/API_references/
+        type: APIReference
+      - url: https://docs.quantum-machines.co/latest/docs/Releases/qm-qua_releases/
+        type: Releases
+  - aid: quantum-machines:qm-saas
+    name: qm-saas Cloud Simulator
+    description: >-
+      Cloud-hosted OPX simulator distributed as the qm-saas Python package.
+      Allows developers to author and validate QUA programs without physical
+      OPX hardware; mirrors the qm-qua client surface against a managed
+      simulator backend.
+    tags:
+      - Quantum Computing
+      - Simulator
+      - Cloud
+      - QUA
+    humanURL: https://pypi.org/project/qm-saas/
+    properties:
+      - url: https://pypi.org/project/qm-saas/
+        type: PyPI
+      - url: https://docs.quantum-machines.co/latest/docs/Guides/simulator/
+        type: Documentation
+  - aid: quantum-machines:qua-libs
+    name: QUA Libraries (qua-libs)
+    description: >-
+      High-level libraries and reference experiments built over QUA. Covers
+      superconducting, semiconductor, NV, and other qubit modalities with
+      ready-to-run calibration scripts and example sequences.
+    tags:
+      - Quantum Computing
+      - Libraries
+      - Examples
+      - QUA
+    humanURL: https://github.com/qua-platform/qua-libs
+    properties:
+      - url: https://github.com/qua-platform/qua-libs
+        type: SourceCode
+  - aid: quantum-machines:py-qua-tools
+    name: py-qua-tools
+    description: >-
+      Toolbox of Python utilities for QUA experiments — analog filters, mixer
+      calibration, plotting, calibration helpers, and integrations with common
+      lab instruments. Distributed on PyPI as qualang-tools.
+    tags:
+      - Quantum Computing
+      - Tools
+      - Python
+      - QUA
+    humanURL: https://github.com/qua-platform/py-qua-tools
+    properties:
+      - url: https://github.com/qua-platform/py-qua-tools
+        type: SourceCode
+      - url: https://pypi.org/project/qualang-tools/
+        type: PyPI
+  - aid: quantum-machines:quam
+    name: Quantum Abstract Machine (QUAM)
+    description: >-
+      Framework for abstracting and managing quantum programming environments
+      on top of QUA. Provides an object model for qubits, resonators, pulses,
+      and configuration; serializes to JSON and generates QUA configuration
+      dictionaries.
+    tags:
+      - Quantum Computing
+      - Framework
+      - QUA
+      - Abstraction
+    humanURL: https://github.com/qua-platform/quam
+    properties:
+      - url: https://github.com/qua-platform/quam
+        type: SourceCode
+      - url: https://qua-platform.github.io/quam/
+        type: Documentation
+  - aid: quantum-machines:quam-builder
+    name: QUAM Builder
+    description: >-
+      Builder tool for generating QUAM state from hardware wiring and
+      configuration inputs.
+    tags:
+      - Quantum Computing
+      - QUAM
+      - Builder
+    humanURL: https://github.com/qua-platform/quam-builder
+    properties:
+      - url: https://github.com/qua-platform/quam-builder
+        type: SourceCode
+  - aid: quantum-machines:qualibrate
+    name: QUAlibrate
+    description: >-
+      User-programmable calibration software for large-scale quantum
+      computers. Orchestrates calibration graphs (calibration nodes and their
+      dependencies) on top of QUA/QUAM.
+    tags:
+      - Quantum Computing
+      - Calibration
+      - QUA
+    humanURL: https://github.com/qua-platform/qualibrate
+    properties:
+      - url: https://github.com/qua-platform/qualibrate
+        type: SourceCode
+      - url: https://qua-platform.github.io/qualibrate/
+        type: Documentation
+  - aid: quantum-machines:qualibrate-app
+    name: QUAlibrate App
+    description: >-
+      TypeScript front-end web application for running and visualizing
+      QUAlibrate calibration graphs.
+    tags:
+      - Quantum Computing
+      - Calibration
+      - WebApp
+    humanURL: https://github.com/qua-platform/qualibrate-app
+    properties:
+      - url: https://github.com/qua-platform/qualibrate-app
+        type: SourceCode
+  - aid: quantum-machines:qualibrate-core
+    name: QUAlibrate Core
+    description: >-
+      Core Python library that defines the calibration node and graph
+      abstractions used by QUAlibrate.
+    tags:
+      - Quantum Computing
+      - Calibration
+      - Library
+    humanURL: https://github.com/qua-platform/qualibrate-core
+    properties:
+      - url: https://github.com/qua-platform/qualibrate-core
+        type: SourceCode
+  - aid: quantum-machines:qualibrate-runner
+    name: QUAlibrate Runner
+    description: >-
+      Execution service that runs QUAlibrate calibration nodes and graphs.
+    tags:
+      - Quantum Computing
+      - Calibration
+      - Runner
+    humanURL: https://github.com/qua-platform/qualibrate-runner
+    properties:
+      - url: https://github.com/qua-platform/qualibrate-runner
+        type: SourceCode
+  - aid: quantum-machines:qualibrate-config
+    name: QUAlibrate Config
+    description: >-
+      Configuration management package for QUAlibrate deployments.
+    tags:
+      - Quantum Computing
+      - Calibration
+      - Configuration
+    humanURL: https://github.com/qua-platform/qualibrate-config
+    properties:
+      - url: https://github.com/qua-platform/qualibrate-config
+        type: SourceCode
+  - aid: quantum-machines:qualibration-libs
+    name: QUAlibration Libraries
+    description: >-
+      Collection of calibration graph building blocks (qubit spectroscopy,
+      Rabi, T1, T2, readout calibration, etc.) for QUAlibrate.
+    tags:
+      - Quantum Computing
+      - Calibration
+      - Libraries
+    humanURL: https://github.com/qua-platform/qualibration-libs
+    properties:
+      - url: https://github.com/qua-platform/qualibration-libs
+        type: SourceCode
+  - aid: quantum-machines:qua-dashboards
+    name: QUA Dashboards
+    description: >-
+      Interactive dashboards (Plotly Dash / Streamlit) for visualizing QUA
+      experiment results and live data streams.
+    tags:
+      - Quantum Computing
+      - Dashboards
+      - Visualization
+    humanURL: https://github.com/qua-platform/qua-dashboards
+    properties:
+      - url: https://github.com/qua-platform/qua-dashboards
+        type: SourceCode
+common:
+  - type: Website
+    url: https://www.quantum-machines.co
+  - type: Documentation
+    url: https://docs.quantum-machines.co/latest/
+  - type: QOP
+    url: https://www.quantum-machines.co/products/qop/
+  - type: OPX1000
+    url: https://www.quantum-machines.co/products/opx1000/
+  - type: OPXPlus
+    url: https://www.quantum-machines.co/products/opx/
+  - type: Octave
+    url: https://www.quantum-machines.co/products/octave/
+  - type: QUA
+    url: https://docs.quantum-machines.co/latest/docs/Introduction/qua_overview/
+  - type: QUAlibrate
+    url: https://qua-platform.github.io/qualibrate/
+  - type: PythonSDK
+    url: https://pypi.org/project/qm-qua/
+  - type: CloudSimulator
+    url: https://pypi.org/project/qm-saas/
+  - type: GitHub
+    url: https://github.com/qua-platform
+  - type: Blog
+    url: https://www.quantum-machines.co/blog/
+  - type: News
+    url: https://www.quantum-machines.co/news/
+  - type: Customers
+    url: https://www.quantum-machines.co/customers/
+  - type: Partners
+    url: https://www.quantum-machines.co/partners/
+  - type: Company
+    url: https://www.quantum-machines.co/about/
+  - type: Careers
+    url: https://www.quantum-machines.co/careers/
+  - type: Contact
+    url: https://www.quantum-machines.co/contact/
+  - type: Support
+    url: https://www.quantum-machines.co/support/
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/quantum-machines/
+  - type: Twitter
+    url: https://twitter.com/QM_quantum
+  - type: YouTube
+    url: https://www.youtube.com/@QuantumMachines
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
