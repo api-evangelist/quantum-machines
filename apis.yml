@@ -78,7 +78,7 @@ apis:
       - url: https://docs.quantum-machines.co/latest/docs/API_references/
         type: APIReference
       - url: https://docs.quantum-machines.co/latest/docs/Releases/qm-qua_releases/
-        type: Releases
+        type: ReleaseNotes
   - aid: quantum-machines:qm-saas
     name: qm-saas Cloud Simulator
     description: >-
