@@ -253,6 +253,8 @@ apis:
       - url: https://github.com/qua-platform/qua-dashboards
         type: SourceCode
 common:
+  - type: DomainSecurity
+    url: security/quantum-machines-domain-security.yml
   - type: Website
     url: https://www.quantum-machines.co
   - type: Documentation
