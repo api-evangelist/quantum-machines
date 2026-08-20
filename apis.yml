@@ -195,6 +195,10 @@ apis:
     tags:
       - Quantum Computing
       - Calibration
+      - Web App
+    tags_raw:
+      - Quantum Computing
+      - Calibration
       - WebApp
     humanURL: https://github.com/qua-platform/qualibrate-app
     properties:
@@ -218,6 +222,10 @@ apis:
     description: >-
       Execution service that runs QUAlibrate calibration nodes and graphs.
     tags:
+      - Quantum Computing
+      - Calibration
+      - runner
+    tags_raw:
       - Quantum Computing
       - Calibration
       - Runner
