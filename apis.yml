@@ -26,6 +26,17 @@ description: >-
   reached exclusively via the qm-qua Python SDK against an OPX/OPX1000
   controller (hardware or qm-saas cloud simulator).
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
