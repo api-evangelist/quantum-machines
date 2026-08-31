@@ -206,7 +206,7 @@ apis:
     tags:
       - Quantum Computing
       - Calibration
-      - Web App
+      - WebApp
     tags_raw:
       - Quantum Computing
       - Calibration
@@ -235,7 +235,7 @@ apis:
     tags:
       - Quantum Computing
       - Calibration
-      - runner
+      - Runner
     tags_raw:
       - Quantum Computing
       - Calibration
