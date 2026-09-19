@@ -65,6 +65,25 @@ tags:
   - Arbitrary Waveform Generation
   - Superconducting Qubits
   - Trapped Ions
+  - Neutral Atom
+  - Color Centers
+  - Cryogenic Electronics
+  - Hardware
+  - Israel
+tags_raw:
+  - Quantum Computing
+  - Quantum Control
+  - Pulse Level Programming
+  - QUA
+  - OPX
+  - OPX1000
+  - QOP
+  - Quantum Orchestration Platform
+  - Pulse Processing Unit
+  - Real Time Feedback
+  - Arbitrary Waveform Generation
+  - Superconducting Qubits
+  - Trapped Ions
   - Neutral Atoms
   - Color Centers
   - Cryogenic Electronics
@@ -126,6 +145,11 @@ apis:
       superconducting, semiconductor, NV, and other qubit modalities with
       ready-to-run calibration scripts and example sequences.
     tags:
+      - Quantum Computing
+      - Libraries
+      - Example
+      - QUA
+    tags_raw:
       - Quantum Computing
       - Libraries
       - Examples
