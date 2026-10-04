@@ -28,14 +28,21 @@ description: >-
 type: Index
 deliveryModel:
   model: unknown
+  license_evidence:
+    not_product:
+    - qua-platform/py-qua-tools
+    - qua-platform/qua-dashboards
+    - qua-platform/qua-libs
+    - qua-platform/qualibrate
+    - qua-platform/qualibrate-app
   open_source: unknown
   commercial: false
   callable_host: false
   label: Delivery model not determined — needs a product licence on record
   confidence: low
   source:
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
@@ -146,7 +153,7 @@ apis:
       ready-to-run calibration scripts and example sequences.
     tags:
       - Quantum Computing
-      - Libraries
+      - Library
       - Example
       - QUA
     tags_raw:
@@ -286,6 +293,10 @@ apis:
       Collection of calibration graph building blocks (qubit spectroscopy,
       Rabi, T1, T2, readout calibration, etc.) for QUAlibrate.
     tags:
+      - Quantum Computing
+      - Calibration
+      - Library
+    tags_raw:
       - Quantum Computing
       - Calibration
       - Libraries
