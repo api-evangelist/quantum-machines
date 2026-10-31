@@ -64,70 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Quantum Machines is a Tel Aviv, Israel-based quantum control company that
-builds the Quantum Orchestration Platform (QOP) — a unified hardware and
-software stack for controlling quantum processors at the pulse level. Its
-hardware portfolio centers on the OPX+ and OPX1000 controllers, built around
-a custom Pulse Processing Unit (PPU) that executes classical control and
-real-time feedback alongside arbitrary waveform generation, with
-sub-microsecond classical-quantum round trips and 160 ns active reset
-latency. The platform is programmed in QUA, the company's pulse-level
-domain-specific language, exposed to developers through the qm-qua Python
-SDK and an extensive open-source ecosystem under the
-[qua-platform](https://github.com/qua-platform) GitHub organization.
+Quantum Machines is a Tel Aviv, Israel-based quantum control company that builds the Quantum Orchestration Platform (QOP) — a unified hardware and software stack for controlling quantum processors at the pulse level. Its hardware portfolio centers on the OPX+ and OPX1000 controllers, which are built around a custom Pulse Processing Unit (PPU) architecture that executes classical control and real-time feedback alongside arbitrary waveform generation, with sub-microsecond classical-quantum round trips and 160 ns active reset latency. The platform is programmed in QUA, the company's domain-specific pulse-level language, exposed to developers through the qm-qua Python SDK and an extensive open-source ecosystem under the qua-platform GitHub organization (QUAlibrate, QUAM, qua-libs, py-qua-tools, qua-dashboards). Quantum Machines also ships peripheral hardware including the Octave up/down converter (to 18 GHz), QDAC-II ultra-low-noise DACs, QSwitch, QBox, and the QCage/QBoard/QFilter cryogenic line. The platform is qubit-modality agnostic, supporting superconducting, semiconductor spin, trapped-ion, neutral-atom, and color-center systems, and is used by university labs (MIT, Caltech, Harvard, Princeton, Weizmann) and quantum startups (Alice & Bob, Diraq, EeroQ). Quantum Machines has partnered with NVIDIA on the DGX Quantum hybrid quantum-classical compute platform and acquired the Delft-based QHarbor Bioscience team as a European R&D hub. Quantum Machines does not currently publish a public REST API, OpenAPI specification, or self-service developer signup; the QOP control surface is reached exclusively via the qm-qua Python SDK against an OPX/OPX1000 controller (hardware or qm-saas cloud simulator).
 
-Quantum Machines is qubit-modality agnostic, supporting superconducting,
-semiconductor spin, trapped-ion, neutral-atom, and color-center systems, and
-is used by university labs (MIT, Caltech, Harvard, Princeton, Weizmann) and
-quantum startups (Alice & Bob, Diraq, EeroQ). They have partnered with
-NVIDIA on DGX Quantum and acquired the Delft-based QHarbor team as a
-European R&D hub.
+**Areas:** Quantum Computing · Quantum Control · Pulse Level Programming · QUA · OPX · OPX1000 · QOP · Quantum Orchestration Platform · Pulse Processing Unit · Real Time Feedback · Arbitrary Waveform Generation · Superconducting Qubits
 
-There is no public REST API, OpenAPI specification, or self-service
-developer signup; the QOP control surface is reached exclusively via the
-qm-qua Python SDK against an OPX/OPX1000 controller (hardware or qm-saas
-cloud simulator).
+## Quantum Machines on APIs.io
 
-## Links
+Everything profiled for Quantum Machines is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/quantum-machines/](https://apis.io/providers/quantum-machines/)** — or go straight to one of the APIs or properties below.
 
-- Website: https://www.quantum-machines.co
-- Documentation: https://docs.quantum-machines.co/latest/
-- GitHub: https://github.com/qua-platform
-- PyPI (qm-qua): https://pypi.org/project/qm-qua/
-- PyPI (qm-saas): https://pypi.org/project/qm-saas/
+### APIs (13)
 
-## APIs / SDKs / Tools
+- [qm-qua Python SDK](https://apis.io/apis/quantum-machines/qm-qua-python-sdk/) — Official Python SDK for the QUA pulse-level programming language. Provides the QuantumMachinesManager client, qua DSL (program, declare, play, measure,…
+- [qm-saas Cloud Simulator](https://apis.io/apis/quantum-machines/qm-saas/) — Cloud-hosted OPX simulator distributed as the qm-saas Python package. Allows developers to author and validate QUA programs without physical OPX hardware;…
+- [QUA Libraries (qua-libs)](https://apis.io/apis/quantum-machines/qua-libs/) — High-level libraries and reference experiments built over QUA. Covers superconducting, semiconductor, NV, and other qubit modalities with ready-to-run…
+- [py-qua-tools](https://apis.io/apis/quantum-machines/py-qua-tools/) — Toolbox of Python utilities for QUA experiments — analog filters, mixer calibration, plotting, calibration helpers, and integrations with common lab…
+- [Quantum Abstract Machine (QUAM)](https://apis.io/apis/quantum-machines/quam/) — Framework for abstracting and managing quantum programming environments on top of QUA. Provides an object model for qubits, resonators, pulses, and…
+- [QUAM Builder](https://apis.io/apis/quantum-machines/quam-builder/) — Builder tool for generating QUAM state from hardware wiring and configuration inputs.
+- [QUAlibrate](https://apis.io/apis/quantum-machines/qualibrate/) — User-programmable calibration software for large-scale quantum computers. Orchestrates calibration graphs (calibration nodes and their dependencies) on top…
+- [QUAlibrate App](https://apis.io/apis/quantum-machines/qualibrate-app/) — TypeScript front-end web application for running and visualizing QUAlibrate calibration graphs.
+- [QUAlibrate Core](https://apis.io/apis/quantum-machines/qualibrate-core/) — Core Python library that defines the calibration node and graph abstractions used by QUAlibrate.
+- [QUAlibrate Runner](https://apis.io/apis/quantum-machines/qualibrate-runner/) — Execution service that runs QUAlibrate calibration nodes and graphs.
+- [QUAlibrate Config](https://apis.io/apis/quantum-machines/qualibrate-config/) — Configuration management package for QUAlibrate deployments.
+- [QUAlibration Libraries](https://apis.io/apis/quantum-machines/qualibration-libs/) — Collection of calibration graph building blocks (qubit spectroscopy, Rabi, T1, T2, readout calibration, etc.) for QUAlibrate.
+- [QUA Dashboards](https://apis.io/apis/quantum-machines/qua-dashboards/) — Interactive dashboards (Plotly Dash / Streamlit) for visualizing QUA experiment results and live data streams.
 
-| Name | Type | Description |
-|---|---|---|
-| [qm-qua Python SDK](https://docs.quantum-machines.co/latest/docs/API_references/qua/dsl_main/) | SDK | Official Python SDK for the QUA pulse-level language |
-| [qm-saas](https://pypi.org/project/qm-saas/) | Cloud Simulator | Cloud-hosted OPX simulator |
-| [qua-libs](https://github.com/qua-platform/qua-libs) | Library | High-level libraries and reference experiments over QUA |
-| [py-qua-tools](https://github.com/qua-platform/py-qua-tools) | Toolbox | Python utilities for QUA experiments (qualang-tools on PyPI) |
-| [QUAM](https://github.com/qua-platform/quam) | Framework | Quantum Abstract Machine — object model over QUA |
-| [QUAM Builder](https://github.com/qua-platform/quam-builder) | Tool | Builder for QUAM state from wiring/config |
-| [QUAlibrate](https://github.com/qua-platform/qualibrate) | Calibration | User-programmable calibration for large-scale quantum computers |
-| [QUAlibrate App](https://github.com/qua-platform/qualibrate-app) | Web App | TypeScript front-end for QUAlibrate |
-| [QUAlibrate Core](https://github.com/qua-platform/qualibrate-core) | Library | Core calibration node/graph abstractions |
-| [QUAlibrate Runner](https://github.com/qua-platform/qualibrate-runner) | Service | Executes QUAlibrate calibration graphs |
-| [QUAlibrate Config](https://github.com/qua-platform/qualibrate-config) | Config | Configuration management for QUAlibrate |
-| [QUAlibration Libraries](https://github.com/qua-platform/qualibration-libs) | Library | Calibration graph building blocks |
-| [QUA Dashboards](https://github.com/qua-platform/qua-dashboards) | Visualization | Interactive dashboards for QUA experiments |
+### Published properties
 
-## Hardware
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- OPX+ — ultra-fast quantum controller
-- OPX1000 — modular high-density hybrid control platform
-- Octave — up/down conversion to 18 GHz
-- QDAC-II / QDAC-II Compact — ultra-low-noise DACs
-- QSwitch — software-controlled breakout box
-- QBox — 24-channel breakout box
-- QCage / QBoard / QFilter — cryogenic control components
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-Quantum Computing, Quantum Control, Pulse Level Programming, QUA, OPX,
-OPX1000, QOP, Quantum Orchestration Platform, Pulse Processing Unit,
-Real Time Feedback, Arbitrary Waveform Generation, Superconducting Qubits,
-Trapped Ions, Neutral Atoms, Color Centers, Cryogenic Electronics,
-Hardware, Israel
+- [Quantum Machines Domain Security](https://apis.io/security/quantum-machines/quantum-machines-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.quantum-machines.co)
+- [Documentation](https://docs.quantum-machines.co/latest/)
+- [Support](https://www.quantum-machines.co/support/)
+- [Blog](https://www.quantum-machines.co/blog/)
+
+## API Evangelist rating
+
+**Kin Score 12.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 63.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/quantum-machines/](https://apis.io/providers/quantum-machines/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Quantum Machines: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/quantum-machines/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
